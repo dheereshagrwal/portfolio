@@ -1,17 +1,17 @@
 # Dheeresh Agarwal - Portfolio
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS.
+A modern, responsive portfolio website built with Next.js 16, TypeScript, and Tailwind CSS.
 
 ## ✨ Features
 
-- **Modern Stack**: Built with Next.js 15, React 19, and TypeScript
+- **Modern Stack**: Built with Next.js 16, React 19, and TypeScript
 - **Responsive Design**: Optimized for all device sizes
 - **Performance**: Lighthouse score optimized with image optimization and lazy loading
 - **Accessibility**: WCAG compliant with proper ARIA labels and semantic HTML
 - **Type Safety**: Strict TypeScript configuration with comprehensive type definitions
-- **Code Quality**: ESLint and Prettier configuration for consistent code style
+- **Code Quality**: ESLint configuration for consistent code style
 - **SEO Optimized**: Meta tags, Open Graph, and structured data
-- **Dark Mode**: Beautiful dark theme design
+- **Dark Mode**: Seamless light and dark theme design
 
 ## 🚀 Getting Started
 
@@ -45,38 +45,39 @@ pnpm dev
 
 ## 🛠️ Scripts
 
-- `pnpm dev` - Start development server with Turbopack
+- `pnpm dev` - Start development server
 - `pnpm build` - Build for production
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Fix ESLint errors
 - `pnpm type-check` - Run TypeScript type checking
-- `pnpm format` - Format code with Prettier
-- `pnpm format:check` - Check code formatting
-- `pnpm precommit` - Run type check, lint, and format check
 
 ## 📁 Project Structure
 
 ```
-├── app/                    # Next.js app directory
-│   ├── layout.tsx         # Root layout
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout & providers
 │   ├── page.tsx           # Home page
-│   └── globals.css        # Global styles
+│   ├── globals.css        # Global styles & theme tokens
+│   ├── robots.ts          # Robots configuration
+│   └── sitemap.ts         # Sitemap generator
 ├── components/            # Reusable components
-│   ├── ui/                # UI components (shadcn/ui)
+│   ├── ui/                # UI primitives (shadcn/ui)
 │   └── ...                # Feature components
+├── hooks/                 # Custom React hooks
+│   └── use-meta-color.ts  # Theme meta color hook
 ├── lib/                   # Utility functions and types
-│   ├── constants.ts       # App constants
-│   ├── data.ts           # Static data
-│   ├── hooks.ts          # Custom React hooks
-│   ├── types.ts          # TypeScript types
-│   └── utils.ts          # Utility functions
-└── public/               # Static assets
+│   ├── constants.ts       # App constants & JSON-LD schemas
+│   ├── data.ts            # Content data
+│   ├── fonts.ts           # Google Font configurations
+│   ├── metadata.ts        # SEO metadata
+│   ├── types.ts           # TypeScript definitions
+│   └── utils.ts           # Utility functions (cn helper)
+└── public/                # Static assets
 ```
 
 ## 🎨 Tech Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Framework**: [Next.js 16](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)

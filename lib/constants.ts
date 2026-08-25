@@ -83,7 +83,7 @@ export const FAQ_DATA = [
   {
     question: "Where has Dheeresh Agarwal worked?",
     answer:
-      "Dheeresh has worked at multinational corporations like RingCentral and startups like dcluttr.ai, gaining experience across different company sizes and environments.",
+      "Dheeresh has worked at multinational corporations like RingCentral and startups like TaxHoa, gaining experience across different company sizes and environments.",
   },
   {
     question: "What education does Dheeresh Agarwal have?",
@@ -117,7 +117,6 @@ export const createPersonSchema = (
     EXTERNAL_URLS.GITHUB,
     EXTERNAL_URLS.LINKEDIN,
     EXTERNAL_URLS.LEETCODE,
-    EXTERNAL_URLS.CODEFORCES,
   ],
   worksFor: resume.map((role) => ({
     "@type": "Organization",
@@ -170,11 +169,6 @@ export const createWebsiteSchema = (url: string, content: Content) => ({
     name: CONTACT.NAME,
   },
   inLanguage: "en-US",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${url}?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
 });
 
 export const createPortfolioSchema = (

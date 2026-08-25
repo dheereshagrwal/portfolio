@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
@@ -24,26 +23,24 @@ function SocialIcon({
   className = "",
 }: SocialIconProps) {
   return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Link
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Visit ${label} profile`}
-            className={`text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110 ${className}`}
-          >
-            <Icon size={size} aria-hidden="true" />
-          </Link>
-        </TooltipTrigger>
-        <TooltipContent
-          className={`${inter.className} px-3 py-2 text-sm font-medium text-primary-foreground`}
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Link
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Visit ${label} profile`}
+          className={`text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110 ${className}`}
         >
-          {label}
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
+          <Icon size={size} aria-hidden="true" />
+        </Link>
+      </TooltipTrigger>
+      <TooltipContent
+        className={`${inter.className} px-3 py-2 text-sm font-medium text-primary-foreground`}
+      >
+        {label}
+      </TooltipContent>
+    </Tooltip>
   );
 }
 
