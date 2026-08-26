@@ -82,6 +82,27 @@ For any Python modifications:
 - `uv run ty check` (0 errors, 0 warnings)
 - `uv run pytest` (all tests pass)
 
+## 6. JavaScript / TypeScript / Node Quality & Verification Gates
+
+**Always enforce the verification loop. Use `pnpm` exclusively (never `npm`, `yarn`, or `bun`).**
+
+For any JavaScript / TypeScript / Node modifications:
+
+1. **Package Manager**: Use `pnpm` explicitly for all package installations and script executions. Do not use `npm`, `yarn`, or `bun`.
+2. **Lint & Code Style**: Run `pnpm run lint:fix` (and `pnpm run fmt`). Fix any remaining issues cleanly without disabling rules.
+3. **Type Checking**: Run `pnpm run type-check` (or `tsc --noEmit`). Fix type diagnostics cleanly without using `@ts-ignore` or arbitrary `any`.
+4. **Test Suite**: Run `pnpm test` (if configured) to confirm all tests pass without regression.
+5. **Build Verification**: Run `pnpm run build` to confirm production builds compile cleanly.
+6. **Iterative Verification**: Keep looping through `pnpm run lint:fix`, `pnpm run type-check`, `pnpm test`, and `pnpm run build` until all yield **0 errors, 0 warnings, and clean builds**.
+
+**The mandatory commands that must always pass:**
+
+- `pnpm run lint:fix` (0 errors, 0 warnings)
+- `pnpm run type-check` (0 errors, 0 warnings)
+- `pnpm test` (if configured, all tests pass)
+- `pnpm run build` (clean exit 0)
+
 ---
 
 **These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+
