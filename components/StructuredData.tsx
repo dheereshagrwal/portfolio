@@ -14,9 +14,7 @@ interface StructuredDataProps {
   readonly url?: string;
 }
 
-function StructuredData({
-  url = EXTERNAL_URLS.PORTFOLIO,
-}: StructuredDataProps) {
+function StructuredData({ url = EXTERNAL_URLS.PORTFOLIO }: StructuredDataProps) {
   const personSchema = createPersonSchema(url, resume, CONTENT);
   const websiteSchema = createWebsiteSchema(url, CONTENT);
   const portfolioSchema = createPortfolioSchema(url, projects, CONTENT);

@@ -11,4 +11,3 @@ export default function robots(): MetadataRoute.Robots {
     host: EXTERNAL_URLS.PORTFOLIO,
   };
 }
-

@@ -4,18 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import CompanyAvatar from "@/components/CompanyAvatar";
 import type { Project } from "@/lib/types";
 
-interface ProjectCardProps
-  extends Pick<Project, "name" | "description" | "link" | "logo"> {
+interface ProjectCardProps extends Pick<Project, "name" | "description" | "link" | "logo"> {
   readonly className?: string;
 }
 
-function ProjectCard({
-  name,
-  description,
-  link,
-  logo,
-  className = "",
-}: ProjectCardProps) {
+function ProjectCard({ name, description, link, logo, className = "" }: ProjectCardProps) {
   return (
     <Card
       className={`hover:bg-accent bg-transparent rounded-2xl transition-all duration-300 hover:shadow-lg ${className}`}

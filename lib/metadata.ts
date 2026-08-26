@@ -107,7 +107,7 @@ export const viewport: Viewport = {
 export const createPageMetadata = (
   title: string,
   description: string,
-  type: "profile" | "website" = "profile"
+  type: "profile" | "website" = "profile",
 ): Metadata => ({
   title,
   description,

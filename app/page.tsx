@@ -10,10 +10,7 @@ import Footer from "@/components/Footer";
 import ThemeToggleButton from "@/components/ThemeToggleButton";
 import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata = createPageMetadata(
-  `${CONTENT.HERO.TITLE}`,
-  CONTENT.HERO.DESCRIPTION
-);
+export const metadata = createPageMetadata(`${CONTENT.HERO.TITLE}`, CONTENT.HERO.DESCRIPTION);
 
 export default function Home() {
   return (
@@ -46,10 +43,7 @@ export default function Home() {
 
         {/* Projects Section */}
         <section id="projects" className="mb-16 sm:mb-20">
-          <HeroSection
-            title={CONTENT.PROJECTS.TITLE}
-            description={CONTENT.PROJECTS.DESCRIPTION}
-          />
+          <HeroSection title={CONTENT.PROJECTS.TITLE} description={CONTENT.PROJECTS.DESCRIPTION} />
 
           <article
             className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-8 sm:gap-y-10 lg:max-w-6xl"

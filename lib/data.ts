@@ -2,11 +2,7 @@
  * Centralized data/constants for the portfolio
  * All data is readonly for immutability and better performance
  */
-import {
-  SiGithub,
-  SiLeetcode,
-  SiCodechef,
-} from "react-icons/si";
+import { SiGithub, SiLeetcode, SiCodechef } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import type { Role, Social, Project } from "@/lib/types";
 import { EXTERNAL_URLS, ASSET_PATHS } from "@/lib/constants";
@@ -100,7 +96,7 @@ export const CONTENT = {
   HERO: {
     TITLE: "Software engineer, learner, and an amateur photographer.",
     DESCRIPTION:
-      "I'm Dheeresh, a software engineer based in India. I specialize in building scalable web applications with experience working at both multinational corporations like RingCentral and startups like TaxHoa."
+      "I'm Dheeresh, a software engineer based in India. I specialize in building scalable web applications with experience working at both multinational corporations like RingCentral and startups like TaxHoa.",
   },
   PROJECTS: {
     TITLE: "A collection of projects I've passionately built.",

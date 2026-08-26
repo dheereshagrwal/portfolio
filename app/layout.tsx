@@ -31,20 +31,14 @@ export default function RootLayout({
         <meta name="theme-color" content={META_THEME_COLORS.dark} />
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* DNS prefetch for external links */}
         <link rel="dns-prefetch" href="//github.com" />
         <link rel="dns-prefetch" href="//linkedin.com" />
         <link rel="dns-prefetch" href="//leetcode.com" />
         <StructuredData />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

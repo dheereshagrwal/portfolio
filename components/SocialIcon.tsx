@@ -1,11 +1,7 @@
 import type { IconType } from "react-icons";
 import { inter } from "@/lib/fonts";
 import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface SocialIconProps {
   readonly href: string;
@@ -15,13 +11,7 @@ interface SocialIconProps {
   readonly className?: string;
 }
 
-function SocialIcon({
-  href,
-  icon: Icon,
-  label,
-  size = 24,
-  className = "",
-}: SocialIconProps) {
+function SocialIcon({ href, icon: Icon, label, size = 24, className = "" }: SocialIconProps) {
   return (
     <Tooltip>
       <TooltipTrigger asChild>

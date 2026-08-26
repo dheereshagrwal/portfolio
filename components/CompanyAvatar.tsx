@@ -28,12 +28,7 @@ function CompanyAvatar({
     <Avatar
       className={`items-center justify-center border border-border bg-card hover:bg-accent transition-all duration-300 hover:scale-110 hover:shadow-lg ${sizeClass}`}
     >
-      <AvatarImage
-        src={logo}
-        alt={`${name} logo`}
-        className={imageSizeClass}
-        loading="lazy"
-      />
+      <AvatarImage src={logo} alt={`${name} logo`} className={imageSizeClass} loading="lazy" />
       <AvatarFallback
         className="text-xs font-semibold text-foreground"
         aria-label={`${name} initials`}
@@ -46,7 +41,7 @@ function CompanyAvatar({
   // always wrap avatar in Link now that href is required
   return (
     <Link
-     href={href || "#"}
+      href={href || "#"}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel || `Visit ${name}`}

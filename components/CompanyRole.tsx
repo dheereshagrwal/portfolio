@@ -31,10 +31,7 @@ function CompanyRole({ role }: CompanyRoleProps) {
         </dd>
         {role.promotions ? (
           role.promotions.map((sub) => (
-            <div
-              key={`${sub.title}-${sub.start}`}
-              className="w-full flex flex-wrap gap-1 sm:gap-2"
-            >
+            <div key={`${sub.title}-${sub.start}`} className="w-full flex flex-wrap gap-1 sm:gap-2">
               <dt className="sr-only">Role</dt>
               <dd className="text-sm text-muted-foreground">{sub.title}</dd>
               <dt className="sr-only">Date</dt>

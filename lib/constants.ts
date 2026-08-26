@@ -100,11 +100,7 @@ export const BREADCRUMB_ITEMS = [
 ] as const;
 
 // Schema factory functions - these create schemas with dynamic data
-export const createPersonSchema = (
-  url: string,
-  resume: readonly Role[],
-  content: Content
-) => ({
+export const createPersonSchema = (url: string, resume: readonly Role[], content: Content) => ({
   "@context": "https://schema.org",
   "@type": "Person",
   name: CONTACT.NAME,
@@ -113,11 +109,7 @@ export const createPersonSchema = (
   jobTitle: "Software Engineer",
   description: content.HERO.DESCRIPTION,
   image: `${url}${ASSET_PATHS.LOGOS.PORTFOLIO}`,
-  sameAs: [
-    EXTERNAL_URLS.GITHUB,
-    EXTERNAL_URLS.LINKEDIN,
-    EXTERNAL_URLS.LEETCODE,
-  ],
+  sameAs: [EXTERNAL_URLS.GITHUB, EXTERNAL_URLS.LINKEDIN, EXTERNAL_URLS.LEETCODE],
   worksFor: resume.map((role) => ({
     "@type": "Organization",
     name: role.company,
@@ -174,7 +166,7 @@ export const createWebsiteSchema = (url: string, content: Content) => ({
 export const createPortfolioSchema = (
   url: string,
   projects: readonly Project[],
-  content: Content
+  content: Content,
 ) => ({
   "@context": "https://schema.org",
   "@type": "CreativeWork",
@@ -237,20 +229,14 @@ export const createBreadcrumbSchema = (url: string) => ({
   })),
 });
 
-export const createWorkExperienceSchemas = (
-  url: string,
-  resume: readonly Role[]
-) =>
+export const createWorkExperienceSchemas = (url: string, resume: readonly Role[]) =>
   resume.map((role, index) => ({
     "@context": "https://schema.org",
     "@type": "EmployeeRole",
     "@id": `${url}#job-${index}`,
     roleName: role.title,
     startDate: role.start,
-    endDate:
-      role.end === "Present"
-        ? new Date().toISOString().split("T")[0]
-        : role.end,
+    endDate: role.end === "Present" ? new Date().toISOString().split("T")[0] : role.end,
     worksFor: {
       "@type": "Organization",
       name: role.company,
